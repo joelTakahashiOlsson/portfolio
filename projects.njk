@@ -1,5 +1,5 @@
 ---
-permalink: /index.html
+permalink: /projects/
 ---
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@ permalink: /index.html
 <br>
 
 <main>
-{% for section in collections.contentSections | filterSections(["contact"]) %}
+{% for section in collections.contentSections | filterSections(["projects"]) %}
 <section id="{{ section.id }}">
 {% if section.title_sv %}<h2><span data-sv>{{ section.title_sv }}</span><span data-en>{{ section.title_en }}</span></h2>{% endif %}
 {% for entry in section.entries %}{{ entry.templateContent | safe }}{% endfor %}

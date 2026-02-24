@@ -1,6 +1,6 @@
 document.querySelector('header').innerHTML = `<a href="/"><h1>Joel Takahashi Olsson</h1></a>
   <nav>
-    <a href="/about/"><span data-sv>Om mig</span><span data-en>About me</span></a> <a href="/contact/"><span data-sv>Kontakt</span><span data-en>Contact</span></a> <a href="/experience/"><span data-sv>Erfarenhet</span><span data-en>Experience</span></a> <a href="https://github.com/joeltakahashiolsson">GitHub</a> <a href="https://www.linkedin.com/in/joeltakahashiolsson/">LinkedIn</a>
+    <a href="/about/"><span data-sv>Om mig</span><span data-en>About me</span></a> <a href="/contact/"><span data-sv>Kontakt</span><span data-en>Contact</span></a> <a href="/projects/"><span data-sv>Projekt</span><span data-en>Projects</span></a> <a href="/experience/"><span data-sv>Erfarenhet</span><span data-en>Experience</span></a><a class="social-link" href="https://github.com/joeltakahashiolsson">GitHub</a> <a class="social-link" href="https://www.linkedin.com/in/joeltakahashiolsson/">LinkedIn</a>
     <br>
     <br>
   </nav>

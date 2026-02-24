@@ -18,6 +18,11 @@ nav a.active {
   font-weight: bold;
 }
 
+nav a.social-link {
+  border: 0.7px solid currentColor;
+  padding: 0.1rem 0.4rem;
+}
+
 toggles button {
   margin: 0 0.10rem;
 }
