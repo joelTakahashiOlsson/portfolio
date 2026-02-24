@@ -14,13 +14,13 @@ permalink: /experience/
 <header></header>
 <script src="/partials/header.js"></script>
 <br>
-<br>
 
 <main>
 {% for section in collections.contentSections | filterSections(["employment", "other"]) %}
+{% if not loop.first %}<br>{% endif %}
 <section id="{{ section.id }}">
 {% if section.title_sv %}<h2><span data-sv>{{ section.title_sv }}</span><span data-en>{{ section.title_en }}</span></h2>{% endif %}
-{% for entry in section.entries %}{{ entry.templateContent | safe }}{% endfor %}
+{% for entry in section.entries %}{% if not loop.first %}<br>{% endif %}{{ entry.templateContent | safe }}{% endfor %}
 </section>
 {% endfor %}
 </main>
@@ -29,6 +29,27 @@ permalink: /experience/
 <br>
 <footer></footer>
 <script src="/partials/footer.js"></script>
+<script>
+document.querySelectorAll('main section p').forEach(p => {
+  const title = p.querySelector('b');
+  if (!title) return;
+  const details = document.createElement('span');
+  [...p.childNodes].forEach(node => { if (node !== title) details.appendChild(node); });
+  details.style.cssText = 'display:none;max-width:600px;padding:0.3em 1em;margin:auto';
+  p.appendChild(details);
+  /*
+  const arrow = document.createElement('span');
+  arrow.textContent = ' ▾';
+  arrow.style.cssText = 'display:inline-block;margin-left:0.5em;transform: scale(1.13)';
+  title.appendChild(arrow);
+  title.style.cursor = 'pointer';
+  title.addEventListener('click', () => {
+    const showing = details.style.display !== 'none';
+    details.style.display = showing ? 'none' : 'block';
+    arrow.style.transform = showing ? '' : 'rotate(-180deg)';*/
+  });
+});
+</script>
 
 </body>
 </html>

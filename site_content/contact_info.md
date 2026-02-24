@@ -6,7 +6,7 @@ order: 1
 ---
 
 <p>
-Joel Takahashi Olsson<br>
-<b>E-post:</b> <a href="mailto:joel.t.t.o@gmail.com">joel.t.t.o@gmail.com</a><br>
-<b><span data-sv>Ort</span><span data-en>Ort</span>:</b> Lund
+<b>Joel Takahashi Olsson</b><br>
+<b>Mejl:</b>&nbsp <a href="mailto:joel.t.t.o@gmail.com">joel.t.t.o@gmail.com</a><br>
+<b>&nbsp<span data-sv>Ort</span><span data-en>Ort</span>:</b> Lund
 </p>

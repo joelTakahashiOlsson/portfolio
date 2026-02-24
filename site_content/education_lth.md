@@ -6,5 +6,6 @@ order: 20
 ---
 
 <p>
-<b>2021.08 – · Civilingenjörsprogrammet i Datateknik · Lunds universitet</b>
+<b><span class="date">2021.08 –</span> Civilingenjörsprogrammet i datateknik</b><br>
+Lunds universitet
 </p>

@@ -1,11 +1,14 @@
 -- fix language mode
--- göra så att bara minde länkar är styliserade
--- fixa cv-knappen
+-- göra så att bara mindre länkar är styliserade
 --"hemliga modes" - cs & d-sek & krischan - hur ska de triggas?
---hur ska cv kunna updateras, ska headern peka mot en mapp istället för fil?
 
 --konfigurera så att den hostas på github pages
 --differentiera sociala medier-länkar
 --drop down för första sidans innehåll?
---öka avståndet mellan övriga meriter och arbetslivserfarenhet
---öka avstånd till footer
+--lägg till logga för linkedin och github
+--fixa tooltip för språkknapp och kopieraknapp
+--latex mode ()
+--ändra designen för knapparna helt (mer färg)
+--göra de vanliga länkarna färglösa igen
+--en cv-knapp igen? fast den sammanställer datan på hela sidan
+--byta plats på projekt och erfarenhet

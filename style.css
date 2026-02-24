@@ -1,5 +1,12 @@
-* { font-family: Helvetica, Arial, sans-serif }
+* { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif }
 * { text-align: center }
+* { line-height: 1.4 }
+
+:root { --bg: white; }
+:root[data-theme=dark] { --bg: black; }
+:root[data-theme=cs] { --bg: #004e21; }
+:root[data-theme=krischan] { --bg: rgb(210, 231, 250); }
+:root[data-theme=dsek] { --bg: #f280a1; }
 
 [data-en] { display: none; }
 [lang="en"] [data-sv] { display: none; }
@@ -12,20 +19,32 @@ a {
 
 nav a {
   margin: 0 0.38rem;
+  font-size: 1.1em;
 }
 
 nav a.active {
   font-weight: bold;
 }
 
-nav a.social-link {
-  border: 0.7px solid currentColor;
+toggles a.social-link {
+  margin: 0 0.22rem;
+  border: 1px solid currentColor;
   padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.88em;
 }
 
 toggles button {
-  margin: 0 0.10rem;
+  margin: 0 0.22rem;
+  border: 1px solid currentColor;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.88em;
 }
+/* special themes */
 
 :root[data-theme=dark] a {
   color: white;
@@ -61,4 +80,59 @@ toggles button {
 :root[data-theme=dsek] {
   color: white;
   background-color: #f280a1;
+}
+
+toggles a.social-link:hover {
+  color: slateblue;
+}
+
+toggles button:hover {
+  color: indianred;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 0.4em);
+  left: 50%;
+  transform: translateX(-50%);
+  background: currentColor;
+  color: var(--bg, white);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.78em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+toggles button:active {
+  color: oklch(from currentColor calc(l + 0.5) c h);
+}
+
+h1 {
+  font-size: 2.3em;
+}
+
+b .date {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+toggles {
+  position: relative;
+  display: inline-block;
+}
+
+a:hover {
+  color: slateblue;
 }
