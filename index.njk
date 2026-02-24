@@ -1,0 +1,32 @@
+---
+permalink: /index.html
+---
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joel Takahashi Olsson</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header></header>
+<script src="/partials/header.js"></script>
+<br>
+
+<main>
+{% for section in collections.contentSections %}
+<section id="{{ section.fileSlug }}">
+<h2>{{ section.data.title }}</h2>
+{{ section.templateContent | safe }}
+</section>
+{% endfor %}
+</main>
+
+<br>
+<br>
+<footer></footer>
+<script src="/partials/footer.js"></script>
+
+</body>
+</html>

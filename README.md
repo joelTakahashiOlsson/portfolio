@@ -1,0 +1,1 @@
+Kör programmet genom npm start
