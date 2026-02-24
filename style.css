@@ -1,1 +1,5 @@
 * { font-family: Helvetica, Arial, sans-serif; }
+
+[data-en] { display: none; }
+[lang="en"] [data-sv] { display: none; }
+[lang="en"] [data-en] { display: revert; }

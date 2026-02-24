@@ -2,12 +2,13 @@
 permalink: /index.html
 ---
 <!DOCTYPE html>
-<html lang="sv">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joel Takahashi Olsson</title>
 <link rel="stylesheet" href="/style.css">
+<script>const l=localStorage.getItem('lang');if(l)document.documentElement.setAttribute('lang',l);</script>
 </head>
 <body>
 <header></header>
@@ -17,7 +18,7 @@ permalink: /index.html
 <main>
 {% for section in collections.contentSections %}
 <section id="{{ section.fileSlug }}">
-<h2>{{ section.data.title }}</h2>
+<h2><span data-sv>{{ section.data.title_sv or section.data.title }}</span><span data-en>{{ section.data.title_en or section.data.title_sv or section.data.title }}</span></h2>
 {{ section.templateContent | safe }}
 </section>
 {% endfor %}

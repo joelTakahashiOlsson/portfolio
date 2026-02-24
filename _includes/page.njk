@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html data-title-sv="{{ title_sv or title }}" data-title-en="{{ title_en or title_sv or title }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }}</title>
+<title>{{ title_sv or title }}</title>
 <link rel="stylesheet" href="/style.css">
+<script>const l=localStorage.getItem('lang');if(l)document.documentElement.setAttribute('lang',l);</script>
 </head>
 <body>
 <header></header>
