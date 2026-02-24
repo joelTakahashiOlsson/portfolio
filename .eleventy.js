@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addCollection("contentSections", (collectionApi) =>
-    collectionApi.getFilteredByGlob("content/*.md").sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+    collectionApi.getFilteredByGlob("site_content/*.md").sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
   );
 
   eleventyConfig.addPassthroughCopy("style.css");

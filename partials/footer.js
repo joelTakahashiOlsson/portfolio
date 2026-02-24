@@ -1,2 +1,2 @@
 const footer = document.querySelector('footer');
-footer.innerHTML = `<p>Joel Takahashi Olsson<br>&copy; ${new Date().getFullYear()}</p>`;
+footer.innerHTML = `<p><b>Joel Takahashi Olsson</b><br> ${new Date().getFullYear()}</p>`;

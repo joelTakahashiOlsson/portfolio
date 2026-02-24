@@ -1,0 +1,7 @@
+-- fix language mode
+-- göra så att bara minde länkar är styliserade
+-- fixa cv-knappen
+--"hemliga modes" - cs & d-sek & krischan - hur ska de triggas?
+--hur ska cv kunna updateras, ska headern peka mot en mapp istället för fil?
+
+--konfigurera så att den hostas på github pages

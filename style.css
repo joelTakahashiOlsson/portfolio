@@ -1,5 +1,59 @@
-* { font-family: Helvetica, Arial, sans-serif; }
+* { font-family: Helvetica, Arial, sans-serif }
+* { text-align: center }
 
 [data-en] { display: none; }
 [lang="en"] [data-sv] { display: none; }
 [lang="en"] [data-en] { display: revert; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a {
+  margin: 0 0.38rem;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+toggles button {
+  margin: 0 0.10rem;
+}
+
+:root[data-theme=dark] a {
+  color: white;
+}
+
+:root[data-theme=dark] {
+  color: white;
+  background-color: black;
+}
+
+:root[data-theme=cs] a {
+  color: white;
+}
+
+:root[data-theme=cs] {
+  color: white;
+  background-color: #004e21;
+}
+
+:root[data-theme=krischan] a {
+  color: #012169;
+}
+
+:root[data-theme=krischan] {
+  color: white;
+  background-color: rgb(210, 231, 250);
+}
+
+:root[data-theme=dsek] a {
+  color: #f280a1;
+}
+
+:root[data-theme=dsek] {
+  color: white;
+  background-color: #f280a1;
+}
