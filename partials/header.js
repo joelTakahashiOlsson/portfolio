@@ -1,15 +1,15 @@
 document.querySelector('header').innerHTML = `<a href="/"><h1>Joel Takahashi Olsson</h1></a><nav>
-    <a href="/about/"><span data-sv>Om mig</span><span data-en>About me</span></a>
-    <a href="/contact/"><span data-sv>Kontakt</span><span data-en>Contact</span></a>
-    <a href="/projects/"><span data-sv>Projekt</span><span data-en>Projects</span></a>
-    <a href="/experience/"><span data-sv>Erfarenhet</span><span data-en>Experience</span></a>
+    <ul><li><a href="/about/"><span data-sv>Om mig</span><span data-en>About me</span></a></li>
+    <li><a href="/contact/"><span data-sv>Kontakt</span><span data-en>Contact</span></a></li>
+    <li><a href="/projects/"><span data-sv>Projekt</span><span data-en>Projects</span></a></li>
+    <li><a href="/experience/"><span data-sv>Erfarenhet</span><span data-en>Experience</span></a><li></ul>
   </nav>
   <br>
   <toggles>
-    <button id="lang-toggle" aria-label="byt språk" data-tooltip="byt språk"></button>
-    <button id="copy-link" aria-label="kopiera sidlänk" data-tooltip="kopiera sidlänk"></button>
-    <a class="social-link" href="https://github.com/joeltakahashiolsson">GitHub</a>
-    <a class="social-link" href="https://www.linkedin.com/in/joeltakahashiolsson/">LinkedIn</a>
+    <li><button id="lang-toggle" aria-label="byt språk" data-tooltip="byt språk"></button></li>
+    <li><button id="copy-link" aria-label="kopiera sidlänk" data-tooltip="kopiera sidlänk"></button></li>
+    <li><a class="social-link" href="https://github.com/joeltakahashiolsson">GitHub</a></li>
+    <li><a class="social-link" href="https://www.linkedin.com/in/joeltakahashiolsson/">LinkedIn</a></li>
   </toggles>`
 
 document.querySelectorAll('nav a').forEach(link => {

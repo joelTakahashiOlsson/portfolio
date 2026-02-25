@@ -17,6 +17,16 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  position: center;
+  justify-content: center;
+}
+
 nav a {
   margin: 0 0.38rem;
   font-size: 1.1em;
@@ -129,10 +139,24 @@ b .date {
 }
 
 toggles {
-  position: relative;
+  position: center;
   display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
 }
 
 a:hover {
   color: slateblue;
+}
+
+ul li {
+  float: center;
+}
+
+header a:hover h1 {
+  color:black;
 }
