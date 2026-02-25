@@ -1,1 +1,1 @@
-Kör programmet genom npm start
+Kör programmet genom ```npm start```
