@@ -2,7 +2,7 @@
 * { text-align: center }
 * { line-height: 1.4 }
 
-:root { --bg: white; }
+:root { --bg: white; font-size: 105%; }
 :root[data-theme=dark] { --bg: black; }
 :root[data-theme=cs] { --bg: #004e21; }
 :root[data-theme=krischan] { --bg: rgb(210, 231, 250); }
@@ -37,22 +37,26 @@ nav a.active {
 }
 
 toggles a.social-link {
-  margin: 0 0.22rem;
-  border: 1px solid currentColor;
   padding: 0.1rem 0.4rem;
-  border-radius: 3px;
   font-size: 0.88em;
+  display: inline-block;
+  line-height: normal;
+  box-sizing: border-box;
 }
 
 toggles button {
-  margin: 0 0.22rem;
-  border: 1px solid currentColor;
+  border: none;
   padding: 0.1rem 0.4rem;
-  border-radius: 3px;
   background: none;
   color: inherit;
   cursor: pointer;
   font-size: 0.88em;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+toggles li + li {
+  border-left: 1px solid currentColor;
 }
 /* special themes */
 
@@ -127,6 +131,9 @@ toggles button:hover {
 
 toggles button:active {
   color: oklch(from currentColor calc(l + 0.5) c h);
+  transform: none;
+  padding: 0.1rem 0.4rem;
+  border-width: 1px;
 }
 
 h1 {
@@ -139,14 +146,20 @@ b .date {
 }
 
 toggles {
-  position: center;
-  display: inline-block;
+  display: inline-flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
   justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 8px;
   overflow: hidden;
+}
+
+toggles li {
   display: flex;
+  align-items: center;
+  padding: 3.7px;
 }
 
 a:hover {
