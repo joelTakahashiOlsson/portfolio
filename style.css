@@ -110,7 +110,7 @@ h1 {
 
 b .date {
   display: inline-block;
-  margin-right: 1.5em;
+  margin-right: 0.75em;
 }
 
 toggles {
@@ -129,11 +129,22 @@ toggles li {
   padding: 3.7px;
 }
 
-a:hover {
-  color: slateblue;
-}
 
 
 main {
   margin: 1.5rem auto 4rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
 }
