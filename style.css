@@ -4,9 +4,6 @@
 
 :root { --bg: white; font-size: 105%; }
 :root[data-theme=dark] { --bg: black; }
-:root[data-theme=cs] { --bg: #004e21; }
-:root[data-theme=krischan] { --bg: rgb(210, 231, 250); }
-:root[data-theme=dsek] { --bg: #f280a1; }
 
 [data-en] { display: none; }
 [lang="en"] [data-sv] { display: none; }
@@ -23,7 +20,6 @@ ul {
   padding: 0;
   overflow: hidden;
   display: flex;
-  position: center;
   justify-content: center;
 }
 
@@ -58,8 +54,6 @@ toggles button {
 toggles li + li {
   border-left: 1px solid currentColor;
 }
-/* special themes */
-
 :root[data-theme=dark] a {
   color: white;
 }
@@ -67,33 +61,6 @@ toggles li + li {
 :root[data-theme=dark] {
   color: white;
   background-color: black;
-}
-
-:root[data-theme=cs] a {
-  color: white;
-}
-
-:root[data-theme=cs] {
-  color: white;
-  background-color: #004e21;
-}
-
-:root[data-theme=krischan] a {
-  color: #012169;
-}
-
-:root[data-theme=krischan] {
-  color: white;
-  background-color: rgb(210, 231, 250);
-}
-
-:root[data-theme=dsek] a {
-  color: #f280a1;
-}
-
-:root[data-theme=dsek] {
-  color: white;
-  background-color: #f280a1;
 }
 
 toggles a.social-link:hover {
@@ -166,10 +133,7 @@ a:hover {
   color: slateblue;
 }
 
-ul li {
-  float: center;
-}
 
-header a:hover h1 {
-  color:black;
+main {
+  margin: 1.5rem auto 4rem;
 }

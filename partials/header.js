@@ -13,7 +13,7 @@ document.querySelector('header').innerHTML = `<br><a href="${base}"><h1>Joel Tak
   </toggles>`
 
 document.querySelectorAll('nav a').forEach(link => {
-  if (link.getAttribute('href') === window.location.pathname) {
+  if (link.pathname === window.location.pathname) {
     link.classList.add('active');
   }
 });

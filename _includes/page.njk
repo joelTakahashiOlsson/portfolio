@@ -1,32 +1,18 @@
 <!DOCTYPE html>
-<html data-title-sv="{{ title_sv or title }}" data-title-en="{{ title_en or title_sv or title }}">
+<html data-title-sv="{{ title_sv or 'Joel Takahashi Olsson' }}" data-title-en="{{ title_en or title_sv or 'Joel Takahashi Olsson' }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="{{ '/' | url }}">
-<title>{{ title_sv or title }}</title>
+<title>{{ title_sv or "Joel Takahashi Olsson" }}</title>
 <link rel="stylesheet" href="{{ '/style.css' | url }}">
 <script>const l=localStorage.getItem('lang');if(l)document.documentElement.setAttribute('lang',l);</script>
 </head>
 <body>
 <header></header>
 <script src="{{ '/partials/header.js' | url }}"></script>
-
 <main>
-<div class="content">
-{% if source %}<div class="song-source"><small>Källa: {{ source }}</small></div>{% endif %}
-<br>
 {{ content | safe }}
-</div>
 </main>
-
-<footer></footer>
-<br>
-<br>
-<br>
-<br>
-<br>
-<script src="{{ '/partials/footer.js' | url }}"></script>
-
 </body>
 </html>

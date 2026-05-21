@@ -1,34 +1,12 @@
 ---
 permalink: /contact/
+layout: page.njk
+title_sv: Kontakt — Joel Takahashi Olsson
+title_en: Contact — Joel Takahashi Olsson
 ---
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<base href="{{ '/' | url }}">
-<title>Joel Takahashi Olsson</title>
-<link rel="stylesheet" href="{{ '/style.css' | url }}">
-<script>const l=localStorage.getItem('lang');if(l)document.documentElement.setAttribute('lang',l);</script>
-</head>
-<body>
-<header></header>
-<script src="{{ '/partials/header.js' | url }}"></script>
-<br>
-
-<main>
 {% for section in collections.contentSections | filterSections(["contact"]) %}
 <section id="{{ section.id }}">
 {% if section.title_sv %}<h2><span data-sv>{{ section.title_sv }}</span><span data-en>{{ section.title_en }}</span></h2>{% endif %}
 {% for entry in section.entries %}{% if not loop.first %}<br>{% endif %}{{ entry.templateContent | safe }}{% endfor %}
 </section>
 {% endfor %}
-</main>
-
-<br>
-<br>
-<footer></footer>
-<script src="{{ '/partials/footer.js' | url }}"></script>
-
-</body>
-</html>
