@@ -6,7 +6,7 @@ order: 50
 ---
 
 <p>
-<b><a>Bajbeln</a><a href="https://github.com/Bajbeln/Bajbeln.github.io">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[länk]</a></b><br>
-<span data-sv>Bidrag till studentorganisationen Krischanstaspääxets digitala sångbok. Samarbetsprojekt med andra utvecklare.</span>
-<span data-en>Contribution to the student organisation Krischanstaspääxet's digital songbook. Collaborative project with multiple contributors.</span>
+<b><a>Bajbeln</a><a href="https://github.com/Bajbeln/Bajbeln.github.io">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span data-sv>[länk]</span><span data-en>&lt;link&gt;</span></a></b><br>
+<span data-sv>Utveckling av studentorganisationen Krischanstaspääxets digitala sångbok. Samarbetsprojekt med andra utvecklare.</span>
+<span data-en>Development of the student organisation Krischanstaspääxet's digital songbook. Collaborative project with multiple contributors.</span>
 </p>

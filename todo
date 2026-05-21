@@ -1,14 +1,9 @@
--- fix language mode
 -- göra så att bara mindre länkar är styliserade
---"hemliga modes" - cs & d-sek & krischan - hur ska de triggas?
 
 --konfigurera så att den hostas på github pages
---differentiera sociala medier-länkar mer
 --drop down för erfarenhets sidans innehåll?
---lägg till logga för linkedin och github
 --fixa tooltip för språkknapp och kopieraknapp
---latex mode ()
---ändra designen för knapparna helt (mer färg) - en bar?
 --göra de vanliga länkarna färglösa igen
 --en cv-knapp igen? fast den sammanställer datan på hela sidan
---byta plats på projekt och erfarenhet
+
+--två spalter för arb. livserfarenhet?

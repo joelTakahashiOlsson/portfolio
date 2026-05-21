@@ -123,6 +123,7 @@ toggles button:hover {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.15s;
+  z-index: 10;
 }
 
 [data-tooltip]:hover::after {
@@ -153,7 +154,6 @@ toggles {
   justify-content: center;
   border: 1px solid currentColor;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 toggles li {

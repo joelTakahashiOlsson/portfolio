@@ -7,9 +7,8 @@ document.querySelector('header').innerHTML = `<br><a href="/"><h1>Joel Takahashi
   <br>
   <toggles>
     <li><button id="lang-toggle" aria-label="byt språk" data-tooltip="byt språk"></button></li>
-    <li><button id="copy-link" aria-label="kopiera sidlänk" data-tooltip="kopiera sidlänk"></button></li>
-    <li><a class="social-link" href="https://github.com/joeltakahashiolsson">GitHub</a></li>
-    <li><a class="social-link" href="https://www.linkedin.com/in/joeltakahashiolsson/">LinkedIn</a></li>
+    <li><a id="github-link" class="social-link" href="https://github.com/joeltakahashiolsson" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a id="linkedin-link" class="social-link" href="https://www.linkedin.com/in/joeltakahashiolsson/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
   </toggles>`
 
 document.querySelectorAll('nav a').forEach(link => {
@@ -20,10 +19,15 @@ document.querySelectorAll('nav a').forEach(link => {
 
 const langToggle = document.getElementById('lang-toggle');
 
+const githubLink = document.getElementById('github-link');
+const linkedinLink = document.getElementById('linkedin-link');
+
 function applyLang(en) {
   document.documentElement.setAttribute('lang', en ? 'en' : 'sv');
   langToggle.textContent = en ? 'Svenska' : 'English';
   langToggle.dataset.tooltip = en ? 'change language' : 'byt språk';
+  githubLink.dataset.tooltip = en ? 'GitHub profile' : 'GitHub-profil';
+  linkedinLink.dataset.tooltip = en ? 'LinkedIn profile' : 'LinkedIn-profil';
   const titleAttr = en ? 'data-title-en' : 'data-title-sv';
   const newTitle = document.documentElement.getAttribute(titleAttr);
   if (newTitle) document.title = newTitle;
@@ -37,20 +41,6 @@ requestAnimationFrame(() => { langToggle.style.minWidth = langToggle.offsetWidth
 
 langToggle.addEventListener('click', () => {
   const nowEn = document.documentElement.getAttribute('lang') === 'en';
-  localStorage.setItem('lang', nowEn ? 'en' : 'sv');
+  localStorage.setItem('lang', nowEn ? 'sv' : 'en');
   applyLang(!nowEn);
 })
-
-const copyButton = document.getElementById('copy-link');
-copyButton.textContent = 'Kopiera sidlänk';
-requestAnimationFrame(() => { copyButton.style.minWidth = copyButton.offsetWidth + 'px'; });
-copyButton.addEventListener('click', () => {
-  navigator.clipboard?.writeText(window.location.href).then(() => {
-    copyButton.textContent = 'Kopierad!';
-    copyButton.dataset.tooltip = 'Kopierad!';
-    setTimeout(() => {
-      copyButton.textContent = 'Kopiera sidlänk';
-      copyButton.dataset.tooltip = 'kopiera sidlänk';
-    }, 1500);
-  });
-});
