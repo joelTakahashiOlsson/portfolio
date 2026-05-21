@@ -35,6 +35,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("partials");
 
   return {
+    pathPrefix: "/portfolio/",
     dir: {
       input: ".",
       output: "_site",
