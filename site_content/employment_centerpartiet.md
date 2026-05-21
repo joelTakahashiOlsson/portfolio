@@ -6,6 +6,6 @@ order: 30
 ---
 
 <p>
-<b><span class="date">2022.04 – 2022.09</span> <span data-sv>Valarbetare</span><span data-en>Campaign Worker</span></b><br>
+<b><span class="date">2022.04 – 2022.09</span> <span data-sv>Valarbetare</span><span data-en>Campaign worker</span></b><br>
 Centerpartiet Lund
 </p>
