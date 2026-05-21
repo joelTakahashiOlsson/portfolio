@@ -1,8 +1,9 @@
-document.querySelector('header').innerHTML = `<br><a href="/"><h1>Joel Takahashi Olsson</h1></a><nav>
-    <ul><li><a href="/about/"><span data-sv>Om mig</span><span data-en>About me</span></a></li>
-    <li><a href="/experience/"><span data-sv>Erfarenhet</span><span data-en>Experience</span></a></li>
-    <li><a href="/projects/"><span data-sv>Projekt</span><span data-en>Projects</span></a></li>
-    <li><a href="/contact/"><span data-sv>Kontakt</span><span data-en>Contact</span></a><li></ul>
+const base = document.querySelector('base')?.href || '/';
+document.querySelector('header').innerHTML = `<br><a href="${base}"><h1>Joel Takahashi Olsson</h1></a><nav>
+    <ul><li><a href="${base}about/"><span data-sv>Om mig</span><span data-en>About me</span></a></li>
+    <li><a href="${base}experience/"><span data-sv>Erfarenhet</span><span data-en>Experience</span></a></li>
+    <li><a href="${base}projects/"><span data-sv>Projekt</span><span data-en>Projects</span></a></li>
+    <li><a href="${base}contact/"><span data-sv>Kontakt</span><span data-en>Contact</span></a><li></ul>
   </nav>
   <br>
   <toggles>
