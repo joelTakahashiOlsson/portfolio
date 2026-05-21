@@ -1,9 +1,11 @@
-* { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif }
-* { text-align: center }
-* { line-height: 1.4 }
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1.4;
+}
 
 :root { --bg: white; font-size: 105%; }
-:root[data-theme=dark] { --bg: black; }
+:root[data-theme=dark] { --bg: black; color: white; background-color: black; }
 
 [data-en] { display: none; }
 [lang="en"] [data-sv] { display: none; }
@@ -18,7 +20,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -32,35 +33,42 @@ nav a.active {
   font-weight: bold;
 }
 
-toggles a.social-link {
-  padding: 0.1rem 0.4rem;
-  font-size: 0.88em;
-  display: inline-block;
-  line-height: normal;
-  box-sizing: border-box;
+toggles {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 8px;
 }
 
-toggles button {
-  border: none;
-  padding: 0.1rem 0.4rem;
-  background: none;
-  color: inherit;
-  cursor: pointer;
-  font-size: 0.88em;
-  box-sizing: border-box;
-  line-height: normal;
+toggles li {
+  display: flex;
+  align-items: center;
+  padding: 3.7px;
 }
 
 toggles li + li {
   border-left: 1px solid currentColor;
 }
-:root[data-theme=dark] a {
-  color: white;
+
+toggles a.social-link,
+toggles button {
+  padding: 0.1rem 0.4rem;
+  font-size: 0.88em;
+  line-height: normal;
+  box-sizing: border-box;
 }
 
-:root[data-theme=dark] {
-  color: white;
-  background-color: black;
+toggles a.social-link {
+  display: inline-block;
+}
+
+toggles button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 toggles a.social-link:hover {
@@ -69,6 +77,10 @@ toggles a.social-link:hover {
 
 toggles button:hover {
   color: indianred;
+}
+
+toggles button:active {
+  color: oklch(from currentColor calc(l + 0.5) c h);
 }
 
 [data-tooltip] {
@@ -97,13 +109,6 @@ toggles button:hover {
   opacity: 1;
 }
 
-toggles button:active {
-  color: oklch(from currentColor calc(l + 0.5) c h);
-  transform: none;
-  padding: 0.1rem 0.4rem;
-  border-width: 1px;
-}
-
 h1 {
   font-size: 2.3em;
 }
@@ -112,24 +117,6 @@ b .date {
   display: inline-block;
   margin-right: 0.75em;
 }
-
-toggles {
-  display: inline-flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  border: 1px solid currentColor;
-  border-radius: 8px;
-}
-
-toggles li {
-  display: flex;
-  align-items: center;
-  padding: 3.7px;
-}
-
-
 
 main {
   margin: 1.5rem auto 4rem;
