@@ -12,8 +12,9 @@ document.querySelector('header').innerHTML = `<br><a href="${base}"><h1>Joel Tak
     <li><a id="linkedin-link" class="social-link" href="https://www.linkedin.com/in/joeltakahashiolsson/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
   </toggles>`
 
+const currentPath = window.location.pathname.replace(/\/$/, '');
 document.querySelectorAll('nav a').forEach(link => {
-  if (link.pathname === window.location.pathname) {
+  if (link.pathname.replace(/\/$/, '') === currentPath) {
     link.classList.add('active');
   }
 });
